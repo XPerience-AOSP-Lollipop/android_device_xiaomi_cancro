@@ -190,3 +190,10 @@ BOARD_SEPOLICY_DIRS += \
         $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
+
+# Bliss flags
+BLISS_KRAIT := true
+BLISS_PIPE := true
+BLISS_GRAPHITE := true
+TARGET_TC_ROM := 5.x-HYPER-uber
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
