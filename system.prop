@@ -1,7 +1,7 @@
 ro.vendor.extension_library=libqti-perfd-client.so
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-
+ro.product.device=cancro
 mmp.enable.3g2=true
 mm.enable.smoothstreaming=true
 
