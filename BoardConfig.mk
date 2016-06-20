@@ -54,6 +54,7 @@ BOARD_MKBOOTIMG_ARGS               := --ramdisk_offset 0x02000000 --tags_offset 
 TARGET_KERNEL_SOURCE               := kernel/xiaomi/cancro
 TARGET_KERNEL_ARCH                 := arm
 TARGET_KERNEL_CONFIG               := cyanogen_cancro_defconfig
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9-linaro/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
