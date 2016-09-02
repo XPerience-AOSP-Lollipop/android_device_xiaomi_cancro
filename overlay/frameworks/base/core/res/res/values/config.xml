@@ -297,4 +297,9 @@
 
     <!-- enable doze powersaving mode -->
     <bool name="config_enableAutoPowerModes">true</bool>
+    <add-resource type="string" name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</add-resource>
+    <add-resource type="bool" name="config_dozeUseAccelerometer">true</add-resource>
+    <add-resource type="bool" name="config_dozeAfterScreenOff">true</add-resource>
+    <add-resource type="bool" name="config_powerDecoupleInteractiveModeFromDisplay">true</add-resource>
+    <add-resource type="bool" name="config_allowAutoBrightnessWhileDozing">true</add-resource>
 </resources>
