@@ -99,6 +99,8 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/device_check.sh:install/bin/device_check.sh
 
@@ -142,6 +144,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
+
+# Device was launched with K
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=21
+
 
 # Media & Audio
 PRODUCT_PACKAGES += \

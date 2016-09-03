@@ -42,7 +42,7 @@ TARGET_CPU_SMP      := true
 TARGET_CPU_VARIANT  := krait
 
 # Flags
-TARGET_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64 -DUSE_RIL_VERSION_10
+BOARD_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64 -DUSE_RIL_VERSION_10
 TARGET_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # Kernel
@@ -136,6 +136,7 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE   := 16384000
 BOARD_FLASH_BLOCK_SIZE              := 131072
 
 # Recovery
+TARGET_RECOVERY_DENSITY            := hdpi
 RECOVERY_FSTAB_VERSION             := 2
 TARGET_RECOVERY_FSTAB              := $(CANCRO_PATH)/rootdir/root/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
@@ -181,7 +182,7 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 DONT_DEXPREOPT_PREBUILTS := true
-
+I_WANT_A_QUAIL_STAR :=true
 # SELinux policies
 # qcom sepolicy
 #include device/qcom/sepolicy/sepolicy.mk
@@ -190,5 +191,4 @@ DONT_DEXPREOPT_PREBUILTS := true
 #        $(CANCRO_PATH)/sepolicy
 USE_LEGACY_AUDIO_POLICY := true
 
-TARGET_DISABLE_CMSDK := true
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
