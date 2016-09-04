@@ -176,6 +176,9 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.codecremote=false
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
