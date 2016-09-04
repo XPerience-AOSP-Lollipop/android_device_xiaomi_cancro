@@ -232,6 +232,8 @@ PRODUCT_PACKAGES += librecovery_updater_cancro
 PRODUCT_PACKAGES += \
     Gello
 
+PRODUCT_PACKAGES += \
+    libtinyxml
 
 # Permissions
 PRODUCT_COPY_FILES += \
