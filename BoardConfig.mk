@@ -17,9 +17,6 @@ BOARD_VENDOR := xiaomi
 
 CANCRO_PATH := device/xiaomi/cancro
 
-# ReleaseTools
-TARGET_RELEASETOOLS_EXTENSIONS := $(CANCRO_PATH)/releasetools
-
 TARGET_BOARD_INFO_FILE ?= $(CANCRO_PATH)/board-info.txt
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -170,15 +167,10 @@ BOARD_USES_QC_TIME_SERVICES := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-DONT_DEXPREOPT_PREBUILTS := true
+# Disable dex pre-optimization
+WITH_DEXPREOPT := false
+
+# Avoid CMSDK issues for now
 I_WANT_A_QUAIL_STAR :=true
 # SELinux policies
 # qcom sepolicy
