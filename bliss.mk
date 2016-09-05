@@ -20,13 +20,13 @@ TARGET_SCREEN_WIDTH := 1080
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+$(call inherit-product, vendor/bliss/config/common.mk)
 
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/bliss/config/nfc_enhanced.mk)
+#$(call inherit-product, vendor/bliss/config/nfc_enhanced.mk)
 
 PRODUCT_NAME := bliss_cancro
 PRODUCT_DEVICE := cancro
