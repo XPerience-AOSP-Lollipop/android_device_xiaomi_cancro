@@ -42,11 +42,12 @@ TARGET_CPU_SMP      := true
 TARGET_CPU_VARIANT  := krait
 
 # Flags
-COMMON_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64 -DUSE_RIL_VERSION_10
-COMMON_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
+TARGET_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64 -DUSE_RIL_VERSION_10
+TARGET_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # Kernel
 BOARD_KERNEL_CMDLINE               := console=none vmalloc=340M androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE               += androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT          := true
 BOARD_KERNEL_BASE                  := 0x00000000
 BOARD_KERNEL_PAGESIZE              := 2048
@@ -184,10 +185,10 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # SELinux policies
 # qcom sepolicy
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-        $(CANCRO_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#        $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
 

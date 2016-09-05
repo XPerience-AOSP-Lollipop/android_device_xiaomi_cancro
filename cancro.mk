@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv_x5.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_x5.bin
 
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
     libwpa_client \
     hostapd \
     wpa_supplicant \
@@ -222,6 +221,11 @@ PRODUCT_PACKAGES += librecovery_updater_cancro
 # Gello
 PRODUCT_PACKAGES += \
     Gello
+
+
+# Telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
 
 
 # Permissions
