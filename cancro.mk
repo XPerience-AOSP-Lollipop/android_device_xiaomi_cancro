@@ -217,7 +217,9 @@ PRODUCT_PACKAGES += \
 
 # Gello
 PRODUCT_PACKAGES += \
-    Gello
+    Gello \
+    libtinyxml \
+    libtinyxml2 
 
 
 # Telephony-ext
