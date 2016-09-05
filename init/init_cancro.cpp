@@ -27,14 +27,15 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdlib.h>
 #include <stdio.h>
-#include <fcntl.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include "vendor_init.h"
-#include "property_service.h"
+#include <fcntl.h>
+
 #include "log.h"
+#include "property_service.h"
 #include "util.h"
+#include "vendor_init.h"
 
 #define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
 
