@@ -26,7 +26,7 @@
 #include <unistd.h>
 
 #include "edify/expr.h"
-
+#include "updater/install.h"
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
 #define ALPHABET_LEN 256
@@ -157,14 +157,14 @@ Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[])
 
     ret = get_baseband_version(current_baseband_version, BASEBAND_VER_BUF_LEN);
     if (ret) {
-        return ErrorAbort(state, "%s() failed to read current BASEBAND version: %d",
+        return ErrorAbort(state,kFreadFailure, "%s() failed to read current BASEBAND version: %d",
                 name, ret);
     }
 
     for (i = 0; i < argc; i++) {
         baseband_version = Evaluate(state, argv[i]);
         if (baseband_version < 0) {
-            return ErrorAbort(state, "%s() error parsing arguments: %d",
+            return ErrorAbort(state,kFreadFailure, "%s() error parsing arguments: %d",
                 name, baseband_version);
         }
 
