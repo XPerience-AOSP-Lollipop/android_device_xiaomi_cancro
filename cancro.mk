@@ -188,7 +188,10 @@ PRODUCT_PACKAGES += \
 # Radio
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
-    librmnetctl
+    librmnetctl \
+    datatop \
+    sockev \
+    rmnetcli
 
 # Keystore
 PRODUCT_PACKAGES += \
