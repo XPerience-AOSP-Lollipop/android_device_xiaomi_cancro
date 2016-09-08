@@ -54,8 +54,6 @@ BOARD_MKBOOTIMG_ARGS               := --ramdisk_offset 0x02000000 --tags_offset 
 TARGET_KERNEL_SOURCE               := kernel/xiaomi/cancro
 TARGET_KERNEL_ARCH                 := arm
 TARGET_KERNEL_CONFIG               := cyanogen_cancro_defconfig
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-6.x-HYPER-uber/bin
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
 # Vendor Init
@@ -190,10 +188,3 @@ BOARD_SEPOLICY_DIRS += \
         $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
-
-# Bliss flags
-BLISS_KRAIT := true
-BLISS_PIPE := true
-BLISS_GRAPHITE := true
-TARGET_TC_ROM := 5.x-HYPER-uber
-TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
